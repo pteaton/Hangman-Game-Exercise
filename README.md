@@ -7,7 +7,7 @@
 
 ## MVP -- requirements
 
-* _You must have a `Word` class_.  Look back at JavaScript hangman to see how that might look.
+* _You must have a `Word` class_.  Look back at [JavaScript hangman](OOP-DOM-Hangman.md) to see how that might look.
 * It should print the letters of a word to be guessed like this `_ _ _ _ _ _`
 * As the user guesses letters: 
   * If they get it right:
