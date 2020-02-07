@@ -3,11 +3,14 @@
 
 ## Deliverable
 
+* Fork and clone this repo.  Make a pull request when it is finished.
+
 * A console hangman game, where the user can guess letters until they either win or lose.
 
 ## MVP -- requirements
 
-* _You must have a `Word` class_.  Look back at [JavaScript hangman](OOP-DOM-Hangman.md) to see how that might look.
+* _You must have a `Word` class_.  
+
 * It should print the letters of a word to be guessed like this `_ _ _ _ _ _`
 * As the user guesses letters: 
   * If they get it right:
@@ -15,7 +18,7 @@
     * They should be praised somehow (something like "Yes!")
     * If that guess completes the word, **Game over—Win!** --> they should be told the word, praised for winning, and the game should stop (i.e. stop prompting them for input, and the program should exit).
   * If they guess a wrong letter:
-    * They should be admonished ("No, silly
+    * They should be admonished ("No, silly" or whatver)
     * If that guess uses up their last remaining guess, **Game over—Lose!** --> they should be told they lost and the game should stop (i.e. stop prompting them for input, and the program should exit).
   * If the game is *not* over, then after each guess, it should tell the user how many guesses are remaining, and which letters have already been guessed, and re-print the word with blanks
 
@@ -41,7 +44,14 @@ class Word():
 # see below for tips on how to structure this loop
 ```
 
-# Nice-to-have
+## Wondering how to start?
+
+Look back at the JavaScript hangman assignments [here](https://git.generalassemb.ly/sei-chi-dec-2019/hangman-oop-dom) ([and also here is a different version](OOP-DOM-Hangman.md)) to get some ideas about how that might look.  
+
+But bear in mind you're building a console game that asks for user input and waits vs a browser game based on (innately asynchronous) user events, so some of the overall game structure might be slightly different.  But in many ways that could make it easier!
+
+
+## Nice-to-have
 
 * If the user guesses a letter they have already guessed, they should be told "you already guessed that", and it should not count against their guesses remaining.
 * If the user enters something that isn't a letter, they should be told "that is not a letter", and it should not count against their guesses remaining.
