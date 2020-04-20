@@ -1,6 +1,6 @@
 # CLASSES HERE #
 
-class Word():
+class Hangman():
   # avoid referencing the game object inside the Word class if possible
   def __init__(self, word): 
     # word bank here?
