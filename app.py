@@ -1,26 +1,42 @@
-print('Hello, HW 20')
-
+print('Hangman')
 import random
 from words import words
-
-
-# print(words)
-
 
 class Word():
   def __init__(self, word):
     self.word = word
+    self.split_word = []
 
-  def display_word(self):
+
+  def split_word_method(self):
+    for letter in self.word:
+      self.split_word.append({'letter': letter, 'guessed': False})
+    # return self.split_word
+
+
+
+  def display_word_method(self):
     blank_word = ""
-    for char in self.word:
-      blank_word += " _ "
 
-    print(blank_word)
 
-hello = Word("hello")
-print(hello.word)
-hello.display_word()
+    for letter in self.split_word:
+      if letter['guessed'] == False:
+        blank_word += " _ "
+      else:
+        blank_word += letter['letter']
+
+    return blank_word
+
+this_rounds_word = Word(random.choice(words))
+
+this_rounds_word.split_word_method()
+split_word = this_rounds_word.split_word
+
+display_word = this_rounds_word.display_word_method()
+# print(display_word)
+
+
+
 
 # GAME 
 playing = True
